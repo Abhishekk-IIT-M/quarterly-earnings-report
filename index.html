@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Earnings Report - Q3 2024</title>
+    
+    <!-- RevealJS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css">
+    
+    <!-- Highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    
+    <!-- Custom styles -->
+    <style>
+        .reveal .slides section {
+            text-align: left;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .highlight {
+            background-color: #f39c12;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .financial-metric {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .email-signature {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.7em;
+            color: #7f8c8d;
+        }
+        .code-title {
+            background: #34495e;
+            color: white;
+            padding: 5px 10px;
+            margin-bottom: 0;
+            border-radius: 5px 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Title Slide -->
+            <section data-background-gradient="linear-gradient(45deg, #667eea 0%, #764ba2 100%)">
+                <h1 style="color: white;">Quarterly Earnings Report</h1>
+                <h3 style="color: #ecf0f1;">Q3 2024 Financial Performance</h3>
+                <p style="color: #bdc3c7; text-align: center;">
+                    <strong>Technical Consultant</strong><br>
+                    Major Financial Institution
+                </p>
+                <div class="email-signature" style="color: #ecf0f1;">
+                    Contact: 23ds3000150@ds.study.iitm.ac.in
+                </div>
+                
+                <aside class="notes">
+                    Welcome everyone to our Q3 2024 earnings presentation. Today we'll cover our financial performance, 
+                    key metrics, and strategic outlook. This presentation uses modern web technologies to deliver 
+                    an interactive experience.
+                </aside>
+            </section>
+
+            <!-- Executive Summary (Markdown) -->
+            <section data-markdown data-separator="^\n\n\n" data-separator-vertical="^\n\n">
+                <textarea data-template>
+                ## Executive Summary
+
+                Our Q3 2024 performance demonstrates **strong growth** across key metrics:
+
+                - Revenue increased by **15.2%** YoY
+                - Net income grew **18.7%** compared to Q3 2023
+                - Customer acquisition up **12%**
+                - Digital transformation initiatives on track
+
+                ### Key Highlights
+
+                * Successful launch of mobile banking platform
+                * Enhanced cybersecurity infrastructure
+                * Expansion into emerging markets
+                * Sustainable banking initiatives
+
+                ---
+
+                ### Market Position
+
+                We maintain our position as a **leading financial institution** with:
+
+                | Metric | Q3 2024 | Q3 2023 | Change |
+                |--------|---------|---------|--------|
+                | Market Share | 12.5% | 11.8% | +0.7% |
+                | Customer Base | 2.8M | 2.5M | +12% |
+                | Branch Network | 450 | 430 | +20 |
+                </textarea>
+                
+                <aside class="notes">
+                    This slide provides a comprehensive overview of our Q3 performance. Notice the strong growth 
+                    in all key areas, particularly our 15.2% revenue increase and 18.7% net income growth.
+                </aside>
+            </section>
+
+            <!-- Financial Metrics with Animations -->
+            <section>
+                <h2>Financial Performance Metrics</h2>
+                
+                <div class="financial-metric fragment fade-in" data-fragment-index="1">
+                    <h3>Total Revenue</h3>
+                    <h2>$2.87B</h2>
+                    <p>↑ 15.2% YoY</p>
+                </div>
+                
+                <div class="financial-metric fragment fade-in" data-fragment-index="2">
+                    <h3>Net Income</h3>
+                    <h2>$847M</h2>
+                    <p>↑ 18.7% YoY</p>
+                </div>
+                
+                <div class="financial-metric fragment fade-in" data-fragment-index="3">
+                    <h3>Return on Equity</h3>
+                    <h2>14.3%</h2>
+                    <p>↑ 2.1% from Q2</p>
+                </div>
+                
+                <div class="email-signature">
+                    23ds3000150@ds.study.iitm.ac.in
+                </div>
+                
+                <aside class="notes">
+                    Here we see our core financial metrics animated in sequence. Each metric shows strong performance:
+                    Revenue at $2.87B represents our highest quarterly revenue to date.
+                    Net income growth of 18.7% demonstrates operational efficiency.
+                    ROE of 14.3% exceeds industry benchmarks.
+                </aside>
+            </section>
+
+            <!-- Code Sample: Risk Calculation -->
+            <section>
+                <h2>Risk Management Algorithm</h2>
+                
+                <div class="fragment fade-in">
+                    <div class="code-title">Python - Portfolio Risk Calculation</div>
+                    <pre><code class="python">
+import numpy as np
+import pandas as pd
+from scipy.optimize import minimize
+
+def calculate_portfolio_var(weights, returns, confidence_level=0.05):
+    """
+    Calculate Value at Risk for a portfolio using Monte Carlo simulation
+    """
+    # Portfolio returns
+    portfolio_returns = np.dot(returns, weights)
+    
+    # Calculate VaR at specified confidence level
+    var = np.percentile(portfolio_returns, confidence_level * 100)
+    
+    # Expected Shortfall (Conditional VaR)
+    es = portfolio_returns[portfolio_returns <= var].mean()
+    
+    return {
+        'VaR': abs(var),
+        'Expected_Shortfall': abs(es),
+        'Portfolio_Volatility': np.std(portfolio_returns)
+    }
+
+# Risk metrics for Q3 2024
+portfolio_weights = [0.4, 0.3, 0.2, 0.1]  # Asset allocation
+risk_metrics = calculate_portfolio_var(weights, historical_returns)
+                    </code></pre>
+                </div>
+                
+                <div class="fragment fade-in">
+                    <p><span class="highlight">Current Portfolio VaR:</span> $12.3M (95% confidence)</p>
+                </div>
+                
+                <aside class="notes">
+                    This code demonstrates our advanced risk management system. We use Monte Carlo simulations 
+                    to calculate Value at Risk and Expected Shortfall. Our current portfolio VaR of $12.3M 
+                    is well within acceptable risk limits.
+                </aside>
+            </section>
+
+            <!-- Mathematical Formulas -->
+            <section>
+                <h2>Key Financial Formulas</h2>
+                
+                <div class="fragment fade-in">
+                    <h3>Return on Assets (ROA)</h3>
+                    <p>$$ROA = \frac{\text{Net Income}}{\text{Average Total Assets}} = \frac{847M}{12,450M} = 6.8\%$$</p>
+                </div>
+                
+                <div class="fragment fade-in">
+                    <h3>Capital Adequacy Ratio</h3>
+                    <p>$$CAR = \frac{\text{Tier 1 Capital} + \text{Tier 2 Capital}}{\text{Risk Weighted Assets}} \times 100$$</p>
+                    <p>$$CAR = \frac{1,890M + 340M}{14,200M} \times 100 = 15.7\%$$</p>
+                </div>
+                
+                <div class="fragment fade-in">
+                    <h3>Net Interest Margin</h3>
+                    <p>$$NIM = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Average Earning Assets}}$$</p>
+                    <p>$$NIM = \frac{1,245M - 387M}{11,200M} = 7.66\%$$</p>
+                </div>
+                
+                <div class="email-signature">
+                    23ds3000150@ds.study.iitm.ac.in
+                </div>
+                
+                <aside class="notes">
+                    These formulas show our strong financial health:
+                    ROA of 6.8% indicates efficient asset utilization
+                    CAR of 15.7% exceeds regulatory requirements of 12%
+                    NIM of 7.66% demonstrates strong interest rate management
+                </aside>
+            </section>
+
+            <!-- Technology Stack -->
+            <section>
+                <h2>Digital Infrastructure</h2>
+                
+                <div class="fragment fade-in">
+                    <div class="code-title">JavaScript - Real-time Transaction Processing</div>
+                    <pre><code class="javascript">
+// High-frequency transaction processing system
+class TransactionProcessor {
+    constructor(config) {
+        this.processingQueue = new PriorityQueue();
+        this.riskEngine = new RiskAssessment(config.riskParams);
+        this.throughput = 0;
+    }
+
+    async processTransaction(transaction) {
+        // Validate transaction
+        const validation = await this.validateTransaction(transaction);
+        if (!validation.isValid) {
+            throw new Error(`Transaction failed: ${validation.reason}`);
+        }
+
+        // Risk assessment
+        const riskScore = await this.riskEngine.assess(transaction);
+        
+        // Process based on risk level
+        if (riskScore < 0.3) {
+            return await this.fastTrackProcess(transaction);
+        } else {
+            return await this.standardProcess(transaction);
+        }
+    }
+
+    getMetrics() {
+        return {
+            throughput: this.throughput,
+            averageProcessingTime: this.calculateAverageTime(),
+            successRate: this.getSuccessRate()
+        };
+    }
+}
+                    </code></pre>
+                </div>
+                
+                <div class="fragment fade-in">
+                    <p><span class="highlight">Q3 Performance:</span> 99.97% uptime, 15,000 TPS average</p>
+                </div>
+                
+                <aside class="notes">
+                    Our technology infrastructure processed over 1.2 billion transactions in Q3 with 99.97% uptime.
+                    The new risk engine reduced false positives by 40% while maintaining security standards.
+                </aside>
+            </section>
+
+            <!-- Market Analysis -->
+            <section>
+                <h2>Market Analysis & Outlook</h2>
+                
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="width: 48%;">
+                        <h3 class="fragment fade-in">Strengths</h3>
+                        <ul>
+                            <li class="fragment fade-in">Strong digital adoption (78% of customers)</li>
+                            <li class="fragment fade-in">Robust risk management framework</li>
+                            <li class="fragment fade-in">Diversified revenue streams</li>
+                            <li class="fragment fade-in">Regulatory compliance excellence</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="width: 48%;">
+                        <h3 class="fragment fade-in">Opportunities</h3>
+                        <ul>
+                            <li class="fragment fade-in">AI-driven financial services</li>
+                            <li class="fragment fade-in">Sustainable finance products</li>
+                            <li class="fragment fade-in">Cryptocurrency integration</li>
+                            <li class="fragment fade-in">Cross-border payment solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="fragment fade-in" style="text-align: center; margin-top: 30px;">
+                    <p><strong>Q4 2024 Guidance:</strong> Revenue growth 12-15%, ROE target 15%+</p>
+                </div>
+                
+                <aside class="notes">
+                    Our market position remains strong with 78% digital adoption rate. 
+                    Key opportunities include AI integration and sustainable finance.
+                    Q4 guidance reflects continued growth momentum.
+                </aside>
+            </section>
+
+            <!-- Thank You -->
+            <section data-background-gradient="linear-gradient(45deg, #2c3e50 0%, #3498db 100%)">
+                <h1 style="color: white;">Thank You</h1>
+                <h3 style="color: #ecf0f1;">Questions & Discussion</h3>
+                
+                <div style="color: #bdc3c7; text-align: center; margin-top: 50px;">
+                    <p><strong>Contact Information:</strong></p>
+                    <p>Email: 23ds3000150@ds.study.iitm.ac.in</p>
+                    <p>Technical Consultant - Financial Analytics Division</p>
+                </div>
+                
+                <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #95a5a6;">
+                    <small>Presentation powered by RevealJS | Q3 2024 Earnings Report</small>
+                </div>
+                
+                <aside class="notes">
+                    Thank you for your attention. We're now open for questions about our Q3 performance, 
+                    strategic initiatives, or technical implementations. Our strong results position us 
+                    well for continued growth in Q4 and beyond.
+                </aside>
+            </section>
+        </div>
+    </div>
+
+    <!-- RevealJS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/math/math.min.js"></script>
+
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            
+            // Plugin configuration
+            plugins: [ 
+                RevealMarkdown, 
+                RevealHighlight, 
+                RevealNotes,
+                RevealMath.KaTeX
+            ],
+            
+            // Math configuration
+            math: {
+                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+                // pass other options into `MathJax.Hub.Config()`
+                TeX: { Macros: { RR: "{\\bf R}" } }
+            },
+
+            // Presentation controls
+            controls: true,
+            progress: true,
+            center: true,
+            touch: true,
+            loop: false,
+            
+            // Timing for auto-advance (disabled)
+            autoSlide: 0,
+            
+            // Keyboard shortcuts
+            keyboard: true,
+            
+            // Display overview on ESC
+            overview: true,
+            
+            // Vertical centering of slides
+            center: true,
+            
+            // Enables touch navigation on devices with touch input
+            touch: true,
+            
+            // Fragment animations
+            fragments: true,
+            
+            // Speaker notes
+            showNotes: false
+        });
+
+        // Custom JavaScript for enhanced functionality
+        Reveal.on('slidechanged', event => {
+            console.log(`Moved to slide: ${event.indexh}.${event.indexv}`);
+        });
+    </script>
+</body>
+</html>
